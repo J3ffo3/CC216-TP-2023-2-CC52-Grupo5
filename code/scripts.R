@@ -113,7 +113,7 @@ write.csv(hotel_copy,"hotel_copy.csv",row.names=TRUE)
 library(dplyr)
 library(ggplot2)
 
-## cONCLUSIONES PRELIMINARES ##
+## CONCLUSIONES PRELIMINARES ##
 
 #a)
 table(hotel_copy$hotel)
@@ -126,6 +126,7 @@ ggplot(hotel_copy, aes(x = factor(arrival_date_year))) +
   geom_bar() +
   labs(x = "Año", y = "Número de reservas") +
   ggtitle("Número de reservas por año")
+
 #c)
 ggplot(hotel_copy, aes(x = factor(hotel_copy$arrival_date_month, levels = month.name))) +
   geom_bar() +
